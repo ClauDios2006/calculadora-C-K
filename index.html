@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Celsius a Kelvin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #resultado {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Convertidor de Celsius a Kelvin</h1>
+    <input type="number" id="tempCelsius" placeholder="Ingrese la temperatura en Celsius">
+    <br>
+    <button onclick="convertirCelsiusAKelvin()">Convertir a Kelvin</button>
+    <div id="resultado"></div>
+
+    <script>
+        function convertirCelsiusAKelvin() {
+            var tempCelsius = parseFloat(document.getElementById("tempCelsius").value);
+            var tempKelvin = tempCelsius + 273.15;
+            document.getElementById("resultado").innerHTML = "La temperatura en Kelvin es: " + tempKelvin.toFixed(2);
+        }
+    </script>
+</body>
+</html>
